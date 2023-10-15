@@ -1,13 +1,13 @@
-# 用户: Jenny
-# 时间: 2021/7/28 16:21
+# user: Jenny
+# time: 2021/7/28 16:21
 
 from keras_preprocessing import image
 
-# 导入图片patient1_1.jpg
+# import the picture: patient1_1.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient1_1.jpg
+# crop the picture: patient1_1.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -22,11 +22,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient1_2.jpg
+# import the picture: patient1_2.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient1_2.jpg
+# crop the picture: patient1_2.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -41,11 +41,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient1_3.jpg
+# import the picture: patient1_3.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient1_3.jpg
+# crop the picture: patient1_3.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -60,11 +60,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient1_4.jpg
+# import the picture: patient1_4.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient1_4.jpg
+# crop the picture: patient1_4.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -79,11 +79,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient2_1.jpg
+# import the picture: patient2_1.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient2_1.jpg
+# crop the picture: patient2_1.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -98,11 +98,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient2_2.jpg
+# import the picture: patient2_2.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient2_2.jpg
+# crop the picture: patient2_2.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -117,11 +117,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient2_3.jpg
+# import the picture: patient2_3.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient2_3.jpg
+# crop the picture: patient2_3.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -136,11 +136,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient3_1.jpg
+# import the picture: patient3_1.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient3_1.jpg
+# crop the picture: patient3_1.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -155,11 +155,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient3_2.jpg
+# import the picture: patient3_2.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient3_2.jpg
+# crop the picture: patient3_2.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
@@ -174,11 +174,11 @@ while a <= height-128:
     a = a+128
 print(num)
 
-# 导入图片patient3_3.jpg
+# import the picture: patient3_3.jpg
 img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
-# 裁剪图片patient3_3.jpg
+# crop the picture: patient3_3.jpg
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
