@@ -1,13 +1,16 @@
-# 用户: Jenny
-# 时间: 2021/7/29 14:39
+# user: Jenny
+# time: 2021/7/29 14:39
 import numpy as np
 import os
 import tensorflow as tf
 from tensorflow import keras
 from keras_preprocessing import image
 
+# This is the construction and training of the Auto-encoder model for detecting and calculating hair area. 
+# The training dataset is in the directory '80image' (sample) and '80image_target' (target). 
+# The validation dataset is in the directory '20image' (sample) and '20image_target' (target). 
 
-# 导入原始图像，img_x_arr为np.array
+# import sample images, convert to np.array
 img_80_arr = []
 list_80 = os.listdir("dataset/80image")
 print(list_80)
@@ -30,7 +33,7 @@ print(len(img_20_arr))
 img_20_arr = np.array(img_20_arr)
 print(img_20_arr.shape)
 
-# 导入目标图像，tar_x_arr为np.array
+# import target images, convert to np.array
 tar_80_arr = []
 list_80 = os.listdir("dataset/80image_target")
 print(list_80)
@@ -54,10 +57,10 @@ tar_20_arr = np.array(tar_20_arr)
 print(tar_20_arr.shape)
 
 
-# 处理变量
+# designate sample training data
 x_train = img_80_arr.astype("float16")/255
 x_valid = img_20_arr.astype("float16")/255
-
+# in the target images, set white pixel as 0, other pixel as 1
 y_train = tar_80_arr.copy()
 y_valid = tar_20_arr.copy()
 y_train[tar_80_arr != [255, 255, 255]] = 1
@@ -68,7 +71,7 @@ y_train = y_train[:, :, :, :1]
 y_valid = y_valid[:, :, :, :1]
 
 
-# 自编码器，输出为(128, 128, 1)的np.array
+# construct autoencoder
 physical_devices = tf.config.list_physical_devices('GPU')
 # tf.config.experimental.set_memory_growth(physical_devices[0], True)
 conv_encoder = keras.models.Sequential([
@@ -98,11 +101,11 @@ conv_autoencoder.compile(loss="binary_crossentropy", metrics="acc",
                          optimizer=keras.optimizers.Adam(learning_rate=5e-4,))
 
 
-# 训练
+# train
 conv_autoencoder.fit(x_train, y_train, epochs=200, batch_size=5,
                      validation_data=(x_valid, y_valid), validation_batch_size=5)
 print(conv_autoencoder.summary())
 
 
-# 保存模型
+# save the model
 conv_autoencoder.save("se_seg_hairfollicle.h5")
