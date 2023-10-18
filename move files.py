@@ -1,43 +1,47 @@
-# 用户: Jenny
-# 时间: 2021/8/8 22:19
+# user: Jenny
+# time: 2021/8/8 22:19
 
 import os
 import shutil
 import glob
 
-# 可根据需要将所有文件或图片文件移到目标文件夹
-# 被移动的文件夹和目标文件夹、任务类型
+# this program is to move croped images in directory 'output' to new directories for train set and test set
+# this program can be used in other task involving massive movement of files
+
+# srcdicts is the list of source directory
 srcdicts = []
 x = ""
 while x != "end":
     srcdicts.append(x)
-    x = input("请输入待处理文件夹（若无请输入end)：")
+    x = input("Please input the source directory. Input one directory at a time until all directories are input. If you have finished the input, please type 'end'：")
+    
+# dstdict is the destination directory used to accommodate train set
+dstdict = input("please indicate the directory used to accommodate train set：")
 
-dstdict = input("请输入目标文件夹：")
-task = int(input("请选择任务类型：1.移动所有文件 2.移动jpg图像"))
+# assign variable task to 
+task = int(input("Please choose the files you want to move：1.all the files 2.only images. Then type 1 or 2:"))
 
-
+# define the task
 def move_all_file(srcdicts, dstdict):
-    '''移动所有文件至目标文件夹'''
+    '''move all files to the destination directory'''
     if not os.path.isdir(dstdict):
         os.makedirs(dstdict)
     for srcdict in srcdicts:
         if not os.path.isdir(srcdicts):
-            print(f"文件夹{srcdict}不存在")
+            print(f"directory {srcdict} does not exist")
         else:
             file_list = os.listdir(srcdict)
             for file in file_list:
                 dstfn = dstdict+file
                 shutil.move(f"{srcdict}/file", dstfn)
 
-
 def move_all_img(srcdicts, dstdict):
-    '''移动所有图片至目标文件夹'''
+    '''move all images to the destination directory'''
     if not os.path.isdir(dstdict):
         os.makedirs(dstdict)
     for srcdict in srcdicts:
         if not os.path.isdir(srcdicts):
-            print(f"文件夹{srcdict}不存在")
+            print(f"directory {srcdict} does not exist")
         else:
             img_list = glob.glob(f"{srcdict}/*.jpg")
             for img in img_list:
@@ -50,4 +54,4 @@ if task == 1:
 if task == 2:
     move_all_img(srcdicts, dstdict)
 else:
-    print("请重新输入任务")
+    print("please choose your ")
