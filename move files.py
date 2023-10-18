@@ -18,9 +18,6 @@ while x != "end":
 # dstdict is the destination directory used to accommodate train set
 dstdict = input("please indicate the directory used to accommodate train set：")
 
-# assign variable task to 
-task = int(input("Please choose the files you want to move：1.all the files 2.only images. Then type 1 or 2:"))
-
 # define the task
 def move_all_file(srcdicts, dstdict):
     '''move all files to the destination directory'''
@@ -48,10 +45,14 @@ def move_all_img(srcdicts, dstdict):
                 dstimg = dstdict+img
                 shutil.move(f"{srcdict}/img", dstimg)
 
+# ask user for the task type
+task = 0
+while task != 1 and task != 2:
+    task = int(input("Please choose the files you want to move：1.all the files 2.only images. Then type 1 or 2:"))
 
+# execute the task
 if task == 1:
     move_all_file(srcdicts, dstdict)
 if task == 2:
     move_all_img(srcdicts, dstdict)
-else:
-    print("please choose your ")
+
