@@ -4,7 +4,7 @@
 from keras_preprocessing import image
 
 # import the picture: patient1_1.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient1_1.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient1_1.jpg
@@ -18,12 +18,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/1_1_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient1_2.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient1_2.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient1_2.jpg
@@ -37,12 +37,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/1_2_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient1_3.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient1_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient1_3.jpg
@@ -56,12 +56,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/1_3_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient1_4.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient1_4.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient1_4.jpg
@@ -75,12 +75,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/1_4_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient2_1.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient2_1.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient2_1.jpg
@@ -94,12 +94,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/2_1_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient2_2.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient2_2.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient2_2.jpg
@@ -113,12 +113,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/2_2_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient2_3.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient2_3.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient2_3.jpg
@@ -132,12 +132,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/2_3_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient3_1.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient3_1.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient3_1.jpg
@@ -151,12 +151,12 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/3_1_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
 # import the picture: patient3_2.jpg
-img = image.load_img("input/patient3_3.jpg", color_mode="grayscale")
+img = image.load_img("input/patient3_2.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 # crop the picture: patient3_2.jpg
@@ -170,7 +170,7 @@ while a <= height-128:
         img_array_div = img_array[a:a+128, b:b+128, :]
         b = b+128
         num = num+1
-        image.save_img(f"output/3_3_{num}.jpg", img_array_div)
+        image.save_img(f"output/3_2_{num}.jpg", img_array_div)
     a = a+128
 print(num)
 
