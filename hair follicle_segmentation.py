@@ -10,7 +10,7 @@ from keras_preprocessing import image
 # The training dataset is in the directory '80image' (sample) and '80image_target' (target). 
 # The validation dataset is in the directory '20image' (sample) and '20image_target' (target). 
 
-# import sample images, convert to np.array
+# import sample images, convert to ndarray
 img_80_arr = []
 list_80 = os.listdir("dataset/80image")
 print(list_80)
@@ -33,7 +33,7 @@ print(len(img_20_arr))
 img_20_arr = np.array(img_20_arr)
 print(img_20_arr.shape)
 
-# import target images, convert to np.array
+# import target images, convert to ndarray
 tar_80_arr = []
 list_80 = os.listdir("dataset/80image_target")
 print(list_80)
