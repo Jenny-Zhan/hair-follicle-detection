@@ -10,7 +10,7 @@ img = image.load_img("PUT PHOTO HERE/patient.jpg", color_mode="grayscale")
 img_array = image.img_to_array(img)
 print(img_array.shape)
 
-# crop the image patient.jpg
+# crop the image 'patient.jpg', name the image after process as test_n.jpg, save the test image in directory 'result'
 height = img_array.shape[0]
 width = img_array.shape[1]
 a = 0
