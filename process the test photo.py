@@ -3,7 +3,7 @@
 
 from keras_preprocessing import image
 
-#this program process and convert the test photo into np.array 
+#this program process and convert the test photo into ndarray 
 
 # import the image from directory 'PUT PHOTO HERE'
 img = image.load_img("PUT PHOTO HERE/patient.jpg", color_mode="grayscale")
