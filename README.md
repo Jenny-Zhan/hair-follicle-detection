@@ -6,3 +6,4 @@ This project is the construction of an AutoEncoder-based machine learning model 
 4. 'se_seg_hairfollicle.h5' is the model after training.
 5.  To predict a photo, you need to create a directory 'PUT PHOTO HERE' under the project directory and put the photo in this directory.
 6.  The result of prediction will show up in the directory 'result'.
+7.  The structure of model is shown in 'structure of model.png'.
