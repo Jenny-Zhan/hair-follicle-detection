@@ -71,9 +71,11 @@ y_train = y_train[:, :, :, :1]
 y_valid = y_valid[:, :, :, :1]
 
 
-# construct autoencoder
+# set GPU as conputing device
 physical_devices = tf.config.list_physical_devices('GPU')
-# tf.config.experimental.set_memory_growth(physical_devices[0], True)
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+# construct autoencoder
 conv_encoder = keras.models.Sequential([
     keras.layers.InputLayer(input_shape=[128, 128, 3]),
     keras.layers.Conv2D(4, kernel_size=3, padding="same", activation="selu"),
